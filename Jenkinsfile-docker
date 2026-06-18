@@ -28,7 +28,7 @@ pipeline {
     stage('Build Container Image') {
       agent { label 'controller' }
       steps {
-        sh 'docker image build -t myhello:v1'
+        sh 'docker image build -t myhello:v1 .'
       }
     }
     stage('Tag Container Image') {
